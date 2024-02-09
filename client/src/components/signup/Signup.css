@@ -1,0 +1,101 @@
+.main-bg {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/ffxv_chatroom.png");
+  }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding-bottom: 30px;
+    width: 70%;
+    border-radius: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.header h2 {
+    color: #D0D2CF;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.underline {
+    width: 61px;
+    height: 6px;
+    background: #D0D2CF;
+    border-radius: 9px;
+}
+
+.inputs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    display: flex;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.submit-container {
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    margin-top:60px;
+    align-items: center;
+}
+
+.register-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#349faf, #105073);
+    color: #d0d2cf;
+    font-size: 19px;
+    font-weight: 700;
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove default underline */
+    border: 2px solid transparent; /* Add border */
+    padding: 10px 20px; /* Add padding */
+    transition: all 0.3s ease; /* Add transition for hover effect */
+}
+
+.login-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#D7E2E6, #39A5C9);
+    color: #d0d2cf;
+    font-size: 19px;
+    font-weight: 700;
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove default underline */
+    border: 2px solid transparent; /* Add border */
+    padding: 10px 20px; /* Add padding */
+    transition: all 0.3s ease; /* Add transition for hover effect */
+}
+
+.register-btn:hover,
+.login-btn:hover {
+    border-color: #d0d2cf; /* Change border color on hover */
+    cursor: pointer; /* Change cursor on hover */
+}

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
+import './Signup.css'
 
 function Signup() {
     const [username, setUsername] = useState()
@@ -17,54 +18,54 @@ function Signup() {
         .catch(err => console.log(err))
     }
     return (
-        <div className='clientBg'>
-            <div className='txtfieldCard'>
-                <h2>Register</h2>
+        <div className='main-bg'>
+            <div className='container'>
+                <div className='header'>
+                    <h2>Register</h2>
+                    <div className='underline'></div>
+                </div>
                 <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>First Name</label>
-                        <input 
+                    <div className='inputs'>
+                        <input
                             type='text' 
                             name='firstname' 
-                            placeholder='Enter your first name'
+                            placeholder='First Name'
                             onChange={(e) => setFirstname(e.target.value)}/>
                     </div>
-                    <div>
-                        <label>Last Name</label>
-                        <input 
+                    <div className='inputs'>
+                        <input
                             type='text' 
                             name='lastname' 
-                            placeholder='Enter your last name'
+                            placeholder='Last Name'
                             onChange={(e) => setLastname(e.target.value)}/>
                     </div>
-                    <div>
-                        <label>email</label>
-                        <input 
+                    <div className='inputs'>
+                        <input
                             type='email' 
                             name='email' 
-                            placeholder='Enter your email'
+                            placeholder='Email Address'
                             onChange={(e) => setEmail(e.target.value)}/>
                     </div>
-                    <div>
-                        <label>Username</label>
+                    <div className='inputs'>
                         <input 
                             type='text' 
                             name='username' 
-                            placeholder='Enter your username'
+                            placeholder='User Name'
                             onChange={(e) => setUsername(e.target.value)}/>
                     </div>
-                    <div>
-                        <label>password</label>
-                        <input 
+                    <div className='inputs'>
+                        <input
                             type='password' 
                             name='password' 
-                            placeholder='Enter your password'
+                            placeholder='Password'
                             onChange={(e) => setPassword(e.target.value)}/>
                     </div>
-                    <button type='submit'>Register</button>
+                    <div className="submit-container">
+                        <button type='submit' className='register-btn'>Register</button>
+                        <p>Already have an account?</p>
+                        <Link to='/login' className='login-btn'>Login</Link>
+                    </div>
                 </form>
-                <p>Already have an account?</p>
-                <Link to='/login'>Login</Link>
             </div>
         </div>
     )

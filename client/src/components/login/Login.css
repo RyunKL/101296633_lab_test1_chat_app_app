@@ -1,0 +1,9 @@
+.main-bg {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../assets/ffxv_chatroom.png");
+  }
